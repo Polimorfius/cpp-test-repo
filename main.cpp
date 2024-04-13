@@ -3,6 +3,7 @@
 #include <map>
 #include <string>
 #include "TimeChek.h"
+#include <vector>
 using namespace std;
 
 
@@ -10,24 +11,31 @@ int main(void)
 {
     
     TimeChek tim; // обьявление начала измерения времени
-   
+   vector<string> strSity = {"Moscow","Rome","London",};
+
+   for ( auto &&strSi : strSity)
+   {
+    // cout << strSi << "\n";
+    tim.TimeCheks(strSi);
+   }
+   cout << endl;
 
     // инициализируем map набором пар {ключ, значение}
     map< std::string, int> years = {
-        {"Moscow", 1147},
-        {"Rome", -753},
-        {"London1", 47},
+        {"2Moscow", 1147},
+        {"2Rome", -753},
+        {"2London", 47},
     };
 
-    int it = 0;
+   
 
-    for (const auto &[city, year] : years)
+    for ( auto &&[city, year] : years)
     {
-        cout << city << ": " << year << "\n";
+        // cout << city << ": " << year << "\n";
          tim.TimeCheks(city); // завершение измерения времени
-         ++it;
+        
     }
-
+tim.TimeCheks();
 
     return 0;
 }

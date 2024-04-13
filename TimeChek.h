@@ -19,35 +19,37 @@ private:
 public:
     TimeChek(void)
     {
-       startTime2 = startTime = std::chrono::high_resolution_clock::now();
+        startTime2 = startTime = std::chrono::high_resolution_clock::now();
     }
     void TimeCheks(void)
     {
+
+        const std::chrono::duration<float> &&duration = std::chrono::high_resolution_clock::now() - startTime;
         ++itteratorColl;
-        std::chrono::duration<float> duration = std::chrono::high_resolution_clock::now() - startTime;
-        std::cout << "chek it-" << itteratorColl << ' ' << duration.count() << std::endl;
+        std::cout << "timeChek it-" << itteratorColl << "\t\t" << duration.count() << std::endl;
         startTime = std::chrono::high_resolution_clock::now();
     }
     void TimeCheks(const std::string &name)
     {
+
+        const std::chrono::duration<float> &&duration = std::chrono::high_resolution_clock::now() - startTime;
         ++itteratorColl;
-        std::chrono::duration<float> duration = std::chrono::high_resolution_clock::now() - startTime;
-        std::cout << "chek " << name << '-' << itteratorColl << ' ' << duration.count() << std::endl;
+        std::cout << "timeChek " << name << '-' << itteratorColl << "\t\t" << duration.count() << std::endl;
         startTime = std::chrono::high_resolution_clock::now();
     }
     void TimeCheks(const int nameInt)
     {
 
-        std::chrono::duration<float> duration = std::chrono::high_resolution_clock::now() - startTime;
-        std::cout << "chek " << nameInt << " index-" << nameInt << ' ' << duration.count() << std::endl;
+        const std::chrono::duration<float> &&duration = std::chrono::high_resolution_clock::now() - startTime;
+        std::cout << "timeChek " << nameInt << " index-" << nameInt << "\t\t" << duration.count() << std::endl;
         startTime = std::chrono::high_resolution_clock::now();
     }
     ~TimeChek()
     {
-        
-        std::chrono::duration<float> duration = std::chrono::high_resolution_clock::now() - startTime2;
-        ++itteratorColl;
-        std::cout << "chek_time_program index-" << itteratorColl << ' ' << duration.count() << std::endl;
+
+        // std::chrono::duration<float> &&duration = std::chrono::high_resolution_clock::now() - startTime2;
+        // ++itteratorColl;
+        // std::cout << "chek_time_program index-" << itteratorColl << ' ' << duration.count() << std::endl;
     }
 };
 
