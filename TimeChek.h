@@ -21,7 +21,7 @@ public:
     {
         startTime2 = startTime = std::chrono::high_resolution_clock::now();
     }
-    void TimeCheks(void)
+    void timeChek(void)
     {
 
         const std::chrono::duration<float> &&duration = std::chrono::high_resolution_clock::now() - startTime;
@@ -29,7 +29,7 @@ public:
         std::cout << "timeChek it-№" << itteratorColl << "\t\t\t" << duration.count() << std::endl;
         startTime = std::chrono::high_resolution_clock::now();
     }
-    void TimeCheks(const std::string &name)
+    void timeChek(const std::string &name)
     {
 
         const std::chrono::duration<float> &&duration = std::chrono::high_resolution_clock::now() - startTime;
@@ -37,7 +37,7 @@ public:
         std::cout << "timeChek " << name << " it-№" << itteratorColl << "\t\t\t" << duration.count() << std::endl;
         startTime = std::chrono::high_resolution_clock::now();
     }
-    void TimeCheks(const int nameInt)
+    void timeChek(const int nameInt)
     {
 
         const std::chrono::duration<float> &&duration = std::chrono::high_resolution_clock::now() - startTime;
