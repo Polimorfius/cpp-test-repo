@@ -8,7 +8,7 @@ using namespace std;
 
 int main(void)
 {
-    ////
+    
     TimeChek tim; // обьявление начала измерения времени
 
     vector<string> strSity = {
