@@ -37,9 +37,9 @@ int main(void)
     {
 
         cout << city << ": " << year << "\n";
-        //  tim.TimeCheks(city); // завершение измерения времени
+       
     }
-    tim.timeChek("Siti map print"); // timeChek it-3           2.875e-06
+    tim.timeChek("Siti map print"); 
 
     return 0;
 }
